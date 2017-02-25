@@ -16,10 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
-from view import hello
+from view import hello, helloname
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', hello, name="/"),
-    url(r'^hello/', hello, name="hello"),
+    url(r'^hello/$', hello, name="hello"),
+    url(r'^hello/(?P<name>\w+)/$', helloname, name="hello-name"),
 ]
