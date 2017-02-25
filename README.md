@@ -6,5 +6,5 @@ Has two endpoints:
 1. hello/
   - returns hello
   
-2. hello/{name}
+2. hello/{name}/
   - returns Hello {name}!
